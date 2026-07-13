@@ -1,6 +1,9 @@
 :root {
   --color-primary: #1D4ED8;
+  --color-blue: #2563EB;
   --color-white: #fff;
+  --text-muted: #575757;
+  --border-light: #E5E7EB;
   --page-padding: 7.5%;
 }
 
@@ -42,7 +45,7 @@ footer {
 
 .nav-links a {
   text-decoration: none;
-  color: #575757;
+  color: var(--text-muted);
   font-weight: 500;
   font-size: 1.1rem;
   transition: color 0.2s;
@@ -144,7 +147,7 @@ footer {
 }
 
 .s2-card {
-  border: 1px solid #E5E7EB;
+  border: 1px solid var(--border-light);
   border-radius: 0.75rem;
   overflow: hidden;
   display: flex;
@@ -168,7 +171,7 @@ footer {
 }
 
 .s2-sector {
-  color: #2563EB;
+  color: var(--color-blue);
   font-size: 1rem;
   font-weight: 700;
   display: block;
@@ -185,6 +188,157 @@ footer {
 
 .s2-role {
   font-size: 1.15rem;
-  color: #575757;
+  color: var(--text-muted);
   line-height: 1.4;
+}
+
+.section-3 {
+  max-width: 100rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.section-3 h2 {
+  font-size: 3.75rem;
+  font-weight: 800;
+  color: #000;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.s3-subtitle {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.s3-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.s3-card {
+  --plan-clr: #888888;
+  --price-clr: #000;
+  --per-clr: #888888;
+  --divider-clr: #E5E7EB;
+  --feature-clr: #000;
+
+  background: var(--color-white);
+  border: 1px solid var(--border-light);
+  border-radius: 0.75rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.s3-card:hover {
+  transform: translateY(-4px);
+}
+
+.s3-card-dark {
+  --plan-clr: #93C5FD;
+  --price-clr: var(--color-white);
+  --per-clr: rgba(255, 255, 255, 0.5);
+  --divider-clr: rgba(255, 255, 255, 0.1);
+  --feature-clr: rgba(255, 255, 255, 0.8);
+
+  background: #0D1B2A;
+  border-color: #0D1B2A;
+}
+
+.s3-plan {
+  color: var(--plan-clr);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.s3-price {
+  color: var(--price-clr);
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.s3-per {
+  color: var(--per-clr);
+  font-size: 1.05rem;
+}
+
+.s3-divider {
+  height: 1px;
+  background: var(--divider-clr);
+  margin: 1.5rem 0;
+}
+
+.s3-features {
+  list-style: none;
+  margin-bottom: 2rem;
+  flex: 1;
+}
+
+.s3-features li {
+  color: var(--feature-clr);
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.s3-features li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-blue);
+  flex-shrink: 0;
+}
+
+.s3-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.75em;
+  border-radius: 0.5em;
+  font-weight: 600;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.s3-btn-outline {
+  color: var(--color-blue);
+  border: 2px solid var(--color-blue);
+  background: var(--color-white);
+}
+
+.s3-btn-outline:hover {
+  background: var(--color-blue);
+  color: var(--color-white);
+}
+
+.s3-btn-solid {
+  color: var(--color-white);
+  background: var(--color-blue);
+  border: 2px solid var(--color-blue);
+}
+
+.s3-btn-solid:hover {
+  background: #1e40af;
+  border-color: #1e40af;
+}
+
+.s3-btn-team {
+  color: #0D1B2A;
+  border-color: #0D1B2A;
+}
+
+.s3-btn-team:hover {
+  background: #0D1B2A;
+  color: var(--color-white);
 }
