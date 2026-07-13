@@ -6,6 +6,7 @@
   --text-muted: #575757;
   --border-light: #E5E7EB;
   --page-padding: 7.5%;
+  --transition: 0.3s ease;
 }
 
 * {
@@ -49,7 +50,7 @@ footer {
   color: var(--text-muted);
   font-weight: 500;
   font-size: 1.1rem;
-  transition: color 0.2s;
+  transition: color var(--transition);
 }
 
 .nav-links a:hover {
@@ -133,11 +134,16 @@ footer {
   padding-bottom: 8rem;
 }
 
-.section-2 h2 {
-  font-size: 4rem;
+.section-2 h2,
+.section-3 h2,
+.section-4 h2 {
   font-weight: 800;
   color: #000;
   text-align: center;
+  font-size: 3.75rem;
+}
+
+.section-2 h2 {
   margin-bottom: 5rem;
 }
 
@@ -147,13 +153,18 @@ footer {
   gap: 2rem;
 }
 
-.s2-card {
+.s2-card,
+.s3-card,
+.faq-item {
   border: 1px solid var(--border-light);
   border-radius: 0.75rem;
+}
+
+.s2-card {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .s2-card:hover {
@@ -200,10 +211,6 @@ footer {
 }
 
 .section-3 h2 {
-  font-size: 3.75rem;
-  font-weight: 800;
-  color: #000;
-  text-align: center;
   margin-bottom: 1rem;
 }
 
@@ -222,19 +229,11 @@ footer {
 }
 
 .s3-card {
-  --plan-clr: #888888;
-  --price-clr: #000;
-  --per-clr: #888888;
-  --divider-clr: #E5E7EB;
-  --feature-clr: #000;
-
   background: var(--color-white);
-  border: 1px solid var(--border-light);
-  border-radius: 0.75rem;
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s;
+  transition: transform var(--transition);
 }
 
 .s3-card:hover {
@@ -242,39 +241,49 @@ footer {
 }
 
 .s3-card-dark {
-  --plan-clr: #93C5FD;
-  --price-clr: var(--color-white);
-  --per-clr: rgba(255, 255, 255, 0.5);
-  --divider-clr: rgba(255, 255, 255, 0.1);
-  --feature-clr: rgba(255, 255, 255, 0.8);
-
   background: var(--color-dark);
   border-color: var(--color-dark);
 }
 
 .s3-plan {
-  color: var(--plan-clr);
+  color: #888888;
   font-size: 0.95rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
+.s3-card-dark .s3-plan {
+  color: #93C5FD;
+}
+
 .s3-price {
-  color: var(--price-clr);
+  color: #000;
   font-size: 3.5rem;
   font-weight: 800;
   margin-bottom: 0.25rem;
 }
 
+.s3-card-dark .s3-price {
+  color: var(--color-white);
+}
+
 .s3-per {
-  color: var(--per-clr);
+  color: #888888;
   font-size: 1.05rem;
+}
+
+.s3-card-dark .s3-per {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .s3-divider {
   height: 1px;
-  background: var(--divider-clr);
+  background: var(--border-light);
   margin: 1.5rem 0;
+}
+
+.s3-card-dark .s3-divider {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .s3-features {
@@ -284,12 +293,16 @@ footer {
 }
 
 .s3-features li {
-  color: var(--feature-clr);
+  color: #000;
   font-size: 1.05rem;
   margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
+}
+
+.s3-card-dark .s3-features li {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .s3-features li::before {
@@ -350,10 +363,6 @@ footer {
 }
 
 .section-4 h2 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: #000;
-  text-align: center;
   margin-bottom: 4rem;
 }
 
@@ -367,11 +376,9 @@ footer {
 
 .faq-item {
   position: relative;
-  border: 1px solid var(--border-light);
-  border-radius: 0.75rem;
   background: linear-gradient(to right, #fff 0%, #f8fafc 100%);
   overflow: hidden;
-  transition: 0.3s ease;
+  transition: var(--transition);
 }
 
 .faq-item:hover {
@@ -427,7 +434,7 @@ details[open].faq-item::before {
   width: 1.75rem;
   text-align: center;
   opacity: 0.7;
-  transition: 0.3s ease;
+  transition: var(--transition);
   animation: pulse 2.5s ease-in-out infinite;
 }
 
@@ -447,7 +454,7 @@ details[open] .faq-summary::before {
   content: "+";
   font-size: 1.5rem;
   color: var(--color-blue);
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform var(--transition), color var(--transition);
   flex-shrink: 0;
   margin-left: auto;
 }
@@ -505,7 +512,7 @@ details[open] .faq-summary::after {
 .footer-social-link {
   color: rgba(255, 255, 255, 0.6);
   font-size: 1.5rem;
-  transition: color 0.2s;
+  transition: color var(--transition);
 }
 
 .footer-social-link:hover {
@@ -538,7 +545,7 @@ details[open] .faq-summary::after {
   color: rgba(255, 255, 255, 0.4);
   text-decoration: none;
   font-size: 1rem;
-  transition: color 0.2s;
+  transition: color var(--transition);
 }
 
 .footer-links a:hover {
