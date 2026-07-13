@@ -122,3 +122,69 @@ footer {
 .s1-content .btn {
   margin-top: auto;
 }
+
+.section-2 {
+  max-width: none;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.section-2 h2 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #000;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.s2-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.s2-card {
+  border: 1px solid #E5E7EB;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.s2-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.s2-card-img img {
+  width: 100%;
+  display: block;
+}
+
+.s2-card-text {
+  padding: 1.5rem;
+  background: var(--color-white);
+}
+
+.s2-sector {
+  color: #2563EB;
+  font-size: 1rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.s2-card-text h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.s2-role {
+  font-size: 1.15rem;
+  color: #575757;
+  line-height: 1.4;
+}
