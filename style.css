@@ -344,6 +344,134 @@ footer {
   color: var(--color-white);
 }
 
+.section-4 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.section-4 h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #000;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.faq-list {
+  max-width: 50rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  position: relative;
+  border: 1px solid var(--border-light);
+  border-radius: 0.75rem;
+  background: linear-gradient(to right, #fff 0%, #f8fafc 100%);
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+details[open].faq-item {
+  background: var(--color-white);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.08);
+}
+
+details[open].faq-item:hover {
+  transform: none;
+}
+
+details[open].faq-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--color-blue);
+}
+
+.faq-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+  list-style: none;
+}
+
+.faq-summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-summary:hover {
+  background: rgba(37, 99, 235, 0.04);
+}
+
+.faq-summary::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f059";
+  font-size: 1.4rem;
+  color: var(--color-blue);
+  flex-shrink: 0;
+  width: 1.75rem;
+  text-align: center;
+  opacity: 0.7;
+  transition: 0.3s ease;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+details[open] .faq-summary::before {
+  content: "\f06a";
+  opacity: 1;
+  transform: scale(1.1) rotate(360deg);
+  animation: none;
+}
+
+@keyframes pulse {
+  0%, 100% { text-shadow: 0 0 0 transparent; }
+  50% { text-shadow: 0 0 8px rgba(37, 99, 235, 0.25); }
+}
+
+.faq-summary::after {
+  content: "+";
+  font-size: 1.5rem;
+  color: var(--color-blue);
+  transition: transform 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.faq-item:hover .faq-summary::after {
+  color: var(--color-primary);
+}
+
+details[open] .faq-summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  padding: 0 1.5rem 1.25rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.faq-answer p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-top: 1rem;
+}
+
 .footer {
   max-width: none;
   margin: 0;
