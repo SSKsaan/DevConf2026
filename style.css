@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+nav,
+section,
+footer {
+  max-width: 75rem;
+  padding: 0 5%;
+}
